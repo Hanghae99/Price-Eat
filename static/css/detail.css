@@ -1,0 +1,136 @@
+body {
+  background-color: #f2ca99;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  background-color: rgb(255, 245, 231);
+  padding: 30px;
+  margin-top: 0;
+}
+
+.section1 {
+  padding: 60px;
+}
+
+.section2 {
+  margin-left: 495px;
+  width: 800px;
+}
+
+.review-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inp {
+  outline: none;
+  border: none;
+  padding: 10px;
+}
+
+.btn {
+  border: none;
+  margin-left: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+  background-color: #3d2e29;
+  color: white;
+}
+
+.main-login {
+  display: flex;
+  justify-content: right;
+  margin-right: 40px;
+  color: rgb(0, 0, 0);
+}
+
+.login {
+  margin-right: 20px;
+  cursor: pointer;
+  font-weight: lighter;
+  transition: transform 300ms ease-in;
+}
+
+.login:hover {
+  color: rgb(249, 135, 68);
+  transform: scale(1.2);
+}
+
+.logout {
+  cursor: pointer;
+  font-weight: lighter;
+  transition: transform 250ms ease-in;
+}
+
+.logout:hover {
+  color: rgb(249, 135, 68);
+  transform: scale(1.2);
+}
+
+.border {
+  background-color: rgb(255, 255, 255);
+  margin-right: 50px;
+  margin-left: 50px;
+  opacity: 0.6;
+}
+
+.img {
+  margin: 20px;
+  width: 60%;
+}
+
+.main-list {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 300px;
+  margin-left: 500px;
+}
+
+.detail-info {
+  margin: 20px;
+}
+
+.restaurant-menu {
+  width: 800px;
+  height: 330px;
+}
+
+.menu-info {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  padding: 70px;
+  margin-left: 20px;
+  margin-top: 45px;
+}
+
+.section3 {
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  width: 800px;
+  height: 265px;
+  margin-top: 20px;
+  margin-left: 460px;
+  padding: 50px;
+}
+
+.review-box div + div {
+  margin-top: 10px;
+}
+
+.review-content {
+  background-color: #ffffff;
+  color: #3d2e29;
+  padding: 20px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: left;
+}

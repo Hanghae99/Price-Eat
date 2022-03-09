@@ -1,0 +1,38 @@
+body {
+    background-color: #FCCA3F;
+    min-height: 100vh;
+}
+
+.section {
+    padding: 1rem 1.5rem;
+    max-width: 750px;
+    margin: auto;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 5rem;
+}
+
+.subtitle {
+    font-size: 2rem;
+}
+
+.is-PricEat {
+    color: #f6a35e !important;
+}
+.button.is-PricEat {
+    background-color: #f6a35e;
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.button.is-PricEat.is-outlined {
+    background-color: transparent;
+    border-color: #f6a35e;
+    color: #f6a35e !important;
+}
+
+.help {
+    color: gray;
+}
