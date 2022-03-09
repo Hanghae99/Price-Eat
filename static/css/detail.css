@@ -112,13 +112,13 @@ body {
   height: 560px;
   border: 1px solid blue;
   margin-top: 20px;
+  margin-right: 20px;
 }
 
 #restaurant_info {
   height: 110px;
   border: 1px solid red;
 }
-
 
 #menu_list {
   border: 1px solid black;
@@ -163,4 +163,5 @@ body {
   border-radius: 30px;
   display: flex;
   justify-content: left;
+  margin-bottom: 20px;
 }

@@ -1,5 +1,6 @@
 $(document).ready(function () {
   show_detail();
+  show_review();
 });
 
 function show_detail() {
@@ -15,7 +16,6 @@ function show_detail() {
           let address = rows[i]["address"];
           let store_img = rows[i]["img"];
           let menu = rows[i]["menu"];
-
           let temp_html = `<div class="main-list">
                             <div class="img"
                               style="background-image: url('${store_img}');">
@@ -56,3 +56,38 @@ function get_query() {
   return result;
 }
 let name = get_query()["name"];
+
+function review() {
+  let review_text = $("#input-content").val();
+  $.ajax({
+    type: "POST",
+    url: "/review",
+    data: { review_text_give: review_text, name_give: name },
+    success: function (response) {
+      alert(response["msg"]);
+      window.location.reload();
+    },
+  });
+}
+
+function show_review() {
+  $.ajax({
+    type: "GET",
+    url: "/review",
+    data: {},
+    success: function (response) {
+      let rows = response["reviews"];
+      for (let i = 0; i < rows.length; i++) {
+        if (rows[i]["name"] == name) {
+          let review_text = rows[i]["review_text"];
+          let temp_html = `<div class="review-box">
+                          <div id="post-box" class="review-content">
+                            <p>${review_text}</p>
+                          </div>
+                        </div>`;
+          $("#review").append(temp_html);
+        }
+      }
+    },
+  });
+}
