@@ -34,15 +34,15 @@
         </div>
     </div>
     <h2 class="title" onclick="location.href='/'">PricEat</h2>
-    <form class="input-box">
+    <div class="input-box">
         <div class="input-area">
-            <input class="area" type="text" placeholder="위치" size="30" />
+            <input id="area" class="area" type="text" placeholder="위치" size="30" />
         </div>
         <div class="input-price">
             <input id="price" class="price" type="text" placeholder="가격" size="30" />
         </div>
-        <button type="submit" onclick="getInputValue" class="btn">Search</button>
-    </form>
+        <button type="submit" onclick="getInputValue()" class="btn">Search</button>
+    </div>
 
     <div id="list_box">
     </div>

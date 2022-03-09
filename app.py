@@ -2,7 +2,6 @@ import jwt
 import hashlib
 from flask import *
 from pymongo import MongoClient
-from werkzeug.utils import secure_filename
 from datetime import datetime, timedelta
 import requests
 from bs4 import BeautifulSoup
@@ -85,6 +84,27 @@ def stores_get():
 def store_desc():
     name = request.args.get('name')
     return render_template('detail.html', name=name)
+
+@app.route('/search', methods=['POST'])
+def search():
+    guname_receive = request.form['guname_give']
+    price_receive = request.form['price_give']
+    results = list(db.restaurant.find({"gu_name": guname_receive}, {'_id': False}))
+    name = []
+    asd = []
+    res = []
+    for result in results:
+        name.append(result['name'])
+    price1 = list(db.test.find({}, {'_id': False}))
+    for price in price1:
+        if price_receive in price['menu']:
+            asd.append(price)
+    for a in asd:
+        res.append(a['name'])
+
+    final = list(set(name) & set(res))
+    return jsonify({'final_list': final})
+
 
 @app.route('/review', methods=['POST'])
 def review_post():
