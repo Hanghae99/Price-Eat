@@ -13,22 +13,31 @@ function show_detail() {
         if (rows[i]["name"] === name) {
           let name = rows[i]["name"];
           let address = rows[i]["address"];
-          let store_img = rows[i]["store_img"];
+          let store_img = rows[i]["img"];
+          let menu = rows[i]["menu"];
+
           let temp_html = `<div class="main-list">
                             <img class="img" src="${store_img}" alt="식당이미지" />
                             <div class="restaurant-menu">
                               <div class="detail-info">
-                                <p>식당이름 : ${name}</p>
-                                <p>위치, 주소 : ${address}</p>
-                                <br /><br />
-                                <p>소머리국밥 : 9000원</p>
-                                <p>돼지국밥 : 9000원</p>
-                                <p>소머리국밥 : 9000원</p>
-                                <p>돼지국밥 : 9000원</p>
+                                <div id ="restaurant_info">
+                                  <p>식당이름 : ${name}</p>
+                                  <p>위치, 주소 : ${address}</p>
+                                </div>
+                                <div id="menu_list">
+                                </div>
                               </div>
                             </div>
                           </div>`;
           $("#food-board").append(temp_html);
+
+          for (let j = 0; j < menu.length; j++) {
+            let name_menu = menu[j][0];
+            let price_menu = menu[j][1];
+            console.log(menu);
+            let list_html = `<p>${name_menu} : ${price_menu}</p>`;
+            $("#menu_list").append(list_html);
+          }
         }
       }
     },

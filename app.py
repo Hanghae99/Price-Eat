@@ -78,7 +78,7 @@ def check_dup():
 
 @app.route("/store", methods=["GET"])
 def stores_get():
-    stores_list = list(db.store.find({}, {'_id': False}))
+    stores_list = list(db.restaurant.find({}, {'_id': False}))
     return jsonify({'stores_list': stores_list})
 
 @app.route('/store_desc', methods=['GET'])

@@ -12,8 +12,8 @@ function show_store() {
       let rows = response["stores_list"];
       for (let i = 0; i < rows.length; i++) {
         let name = rows[i]["name"];
-        let address = rows[i]["adress"];
-        let store_img = rows[i]["store_img"];
+        let address = rows[i]["address"];
+        let store_img = rows[i]["img"];
         let temp_html = `<div class="desc_list" onclick="location.href='/store_desc?name=${name}'">
                           <div class="store_img" style="background-image: url(${store_img});">
                           </div>
