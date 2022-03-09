@@ -146,14 +146,22 @@ body {
 .section3 {
   border: 1px solid black;
   margin: auto;
-  width: 800px;
-  height: 265px;
+  width: 840px;
+  height: 500px;
   margin-top: 20px;
-  padding: 50px;
+  padding-top: 10px;
+  margin-bottom: 60px;
+  overflow: scroll;
 }
 
-.review-box div + div {
-  margin-top: 10px;
+.section3::-webkit-scrollbar {
+  width: 0px;
+}
+
+.review-box {
+  margin: auto;
+  margin-bottom: 10px;
+  width: 800px;
 }
 
 .review-content {
