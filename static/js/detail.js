@@ -17,7 +17,9 @@ function show_detail() {
           let menu = rows[i]["menu"];
 
           let temp_html = `<div class="main-list">
-                            <img class="img" src="${store_img}" alt="식당이미지" />
+                            <div class="img"
+                              style="background-image: url('${store_img}');">
+                            </div>
                             <div class="restaurant-menu">
                               <div class="detail-info">
                                 <div id ="restaurant_info">
