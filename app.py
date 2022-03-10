@@ -93,6 +93,7 @@ def search():
     name = []
     asd = []
     res = []
+    rr_final = []
     for result in results:
         name.append(result['name'])
     price1 = list(db.test.find({}, {'_id': False}))
@@ -103,7 +104,14 @@ def search():
         res.append(a['name'])
 
     final = list(set(name) & set(res))
-    return jsonify({'final_list': final})
+    gu_name = []
+    img = []
+    for x in final:
+        r_final = list(db.test.find({'name': x}, {'_id': False}))
+        gu_name.append(r_final[0]['name'])
+        img.append(r_final[0]['img'])
+    rr_final = dict(zip(gu_name, img))
+    return jsonify({'final_list': rr_final})
 
 
 @app.route('/review', methods=['POST'])
