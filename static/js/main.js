@@ -2,6 +2,22 @@ $(document).ready(function () {
   show_store();
 });
 
+function getInputValue() {
+  let area = $("#area").val();
+  let price = $("#price").val();
+  localStorage.setItem("key", price);
+  if (area == "") {
+    alert("현재 위치를 입력해주세요");
+  } else {
+    if (price == "") {
+      alert("원하시는 가격을 입력해주세요");
+    }
+    else {
+      location.href = "search_desc?area=" + area + "&price=" + price;
+    }
+  }
+}
+
 function show_store() {
   $.ajax({
     type: "GET",
@@ -25,10 +41,4 @@ function show_store() {
       }
     },
   });
-}
-
-function getInputValue() {
-  let area = $("#area").val();
-  let price = $("#price").val();
-  location.href = "search_desc?area=" + area + "&price=" + price;
 }

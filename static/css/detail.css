@@ -2,14 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Nanum Brush Script", cursive;
+  font-family: "Nanum Myeongjo", serif;
+  font-family: "Poor Story", cursive;
 }
 
 body {
-  background-color: #f2ca99;
+  background-color: #FFE08C;
 }
 
 .section1 {
   padding: 60px;
+  margin-left: 250px;
 }
 
 .section2 {
@@ -42,45 +46,21 @@ body {
   color: white;
 }
 
-.main-login {
-  display: flex;
-  justify-content: right;
-  margin-right: 40px;
-  color: rgb(0, 0, 0);
-}
-
-.login {
-  margin-right: 20px;
-  cursor: pointer;
-  font-weight: lighter;
-  transition: transform 300ms ease-in;
-}
-
-.login:hover {
-  color: rgb(249, 135, 68);
-  transform: scale(1.2);
-}
-
-.logout {
-  cursor: pointer;
-  font-weight: lighter;
-  transition: transform 250ms ease-in;
-}
-
-.logout:hover {
-  color: rgb(249, 135, 68);
-  transform: scale(1.2);
-}
-
 .title {
   color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: normal;
   padding: 0;
+  width: 250px;
+  margin: auto;
   margin-top: 80px;
+}
+
+title:hover {
+  color: white;
 }
 
 .border {
@@ -91,7 +71,6 @@ body {
 }
 
 .main-list {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   width: 920px;
@@ -110,18 +89,21 @@ body {
 
 .detail-info {
   height: 560px;
-  border: 1px solid blue;
   margin-top: 20px;
   margin-right: 20px;
 }
 
 #restaurant_info {
-  height: 110px;
-  border: 1px solid red;
+  width: 350px;
+  color: #3d2e29;
+  margin-top: 60px;
+  font-size: 14px;
+  height: 90px;
+  font-weight: bold;
 }
 
 #menu_list {
-  border: 1px solid black;
+  margin-top: 0;
   height: 450px;
   overflow: scroll;
 }
@@ -136,7 +118,6 @@ body {
 }
 
 .menu-info {
-  border: 1px solid rgb(255, 255, 255);
   background-color: rgb(255, 255, 255);
   padding: 70px;
   margin-left: 20px;
@@ -144,32 +125,31 @@ body {
 }
 
 .section3 {
-  border: 1px solid black;
   margin: auto;
-  width: 840px;
-  height: 500px;
-  margin-top: 20px;
-  padding-top: 10px;
-  margin-bottom: 60px;
-  overflow: scroll;
-}
-
-.section3::-webkit-scrollbar {
-  width: 0px;
-}
-
-.review-box {
-  margin: auto;
-  margin-bottom: 10px;
   width: 800px;
+  height: 265px;
+  margin-top: 20px;
+  padding: 50px;
+}
+
+.review-box div + div {
+  margin-top: 10px;
 }
 
 .review-content {
   background-color: #ffffff;
   color: #3d2e29;
   padding: 20px;
-  border-radius: 30px;
+  border-radius: 10px;
   display: flex;
   justify-content: left;
   margin-bottom: 20px;
+}
+
+.red {
+  max-width: 70%;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 240, 240);
+  background-color: #84a172;
 }

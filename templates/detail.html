@@ -5,24 +5,20 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../static/css/detail.css" />
+  <link rel="stylesheet" href="../static/css/detail.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Myeongjo:wght@800&family=Poor+Story&display=swap"
+            rel="stylesheet"
+    />
   <title>DetailPage</title>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
 
-  <div class="border">
-    <div class="main-login">
-      {% if member == null %}
-          <a class="login" href="/login">로그인</a>
-      {% else %}
-          <span>{{ member['id'] }}님 환영합니다.</span>
-      {% endif %}
-          <a href="javascript:sign_out()">로그아웃</a>
-    </div>
-  </div>
-  <h2 class="title" onclick="location.href='/'">PricEat</h2>
+  <h2 class="title" onclick="location.href='/'">Restaurant Info🍚</h2>
   <section id="food-board" class="section1">
     <!-- <div class="main-list">
       <div class="img"
