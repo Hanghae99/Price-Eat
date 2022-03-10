@@ -3,10 +3,11 @@ import hashlib
 from flask import *
 from pymongo import MongoClient
 from datetime import datetime, timedelta
+import dbconfig
 
 app = Flask(__name__)
 
-client = MongoClient('mongodb+srv://sparta:sparta@cluster0.jclgm.mongodb.net/Cluster0?retryWrites=true&w=majority')
+client = MongoClient(dbconfig.MONGODB_SETTING.values())
 db = client.test
 
 SECRET_KEY = "PricEat"
