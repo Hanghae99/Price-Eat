@@ -93,7 +93,6 @@ def search():
     name = []
     asd = []
     res = []
-    rr_final = []
     for result in results:
         name.append(result['name'])
     price1 = list(db.test.find({}, {'_id': False}))
