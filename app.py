@@ -89,7 +89,7 @@ def store_desc():
 def search():
     guname_receive = request.form['guname_give']
     price_receive = request.form['price_give']
-    results = list(db.restaurant.find({"gu_name": guname_receive}, {'_id': False}))
+    results = list(db.restaurant.find({"dong_name": guname_receive}, {'_id': False}))
     name = []
     asd = []
     res = []
@@ -132,7 +132,7 @@ def reviews_get():
 
 @app.route("/search_desc")
 def search_desc():
-    return render_template('search.html') 
+    return render_template('search.html')
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)

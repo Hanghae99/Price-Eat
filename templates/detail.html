@@ -14,8 +14,12 @@
 
   <div class="border">
     <div class="main-login">
-      <h2 class="login">Login</h2>
-      <h2 class="logout">Logout</h2>
+      {% if member == null %}
+          <a class="login" href="/login">로그인</a>
+      {% else %}
+          <span>{{ member['id'] }}님 환영합니다.</span>
+      {% endif %}
+          <a href="javascript:sign_out()">로그아웃</a>
     </div>
   </div>
   <h2 class="title" onclick="location.href='/'">PricEat</h2>
